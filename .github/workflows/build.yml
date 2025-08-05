@@ -45,7 +45,7 @@ on:
         default: true
       runnerName:
         required: true
-        default: ubuntu-latest-m
+        default: ubuntu-latest
         type: choice
         options:
         - ubuntu-latest
