@@ -85,15 +85,16 @@ jobs:
   build_release:
     runs-on: ubuntu-latest
     steps:
-      - name: report! options
+      - name: report! options via manual dispatch
         shell: bash
         run: |
+          echo Branch: ${{ github.ref }} 
           echo Inputs via manual dispatch:
           echo devfast ${{ github.event.inputs.devfast }}
           echo skimfast ${{ github.event.inputs.skimfast }}
           echo qemuNoKVM ${{ github.event.inputs.qemuNoKVM }}
           echo runnerName ${{ github.event.inputs.runnerName }}
-      - name: report! options
+      - name: report! options via workflow
         shell: bash
         run: |
           echo Inputs via workflow: 
